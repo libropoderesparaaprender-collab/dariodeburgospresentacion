@@ -33,25 +33,31 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        .header-main {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .header-section {
+            text-align: center;
             border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         h1 {
             color: var(--primary-color);
-            font-size: 1.4rem;
-            margin: 0;
+            font-size: 1.6rem;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+        }
+
+        .ppa-logo-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
         }
 
         .ppa-logo {
-            max-height: 60px;
+            max-height: 120px;
             width: auto;
-            border-radius: 5px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
         .hero-card {
@@ -208,17 +214,18 @@
         @media (max-width: 600px) {
             .hero-word { font-size: 2.2rem; }
             .tab-link { flex: 1 1 100%; border-radius: 4px; }
-            .header-main { flex-direction: column-reverse; align-items: flex-start; }
-            .ppa-logo { margin-bottom: 10px; }
+            h1 { font-size: 1.3rem; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header-main">
-        <h1>PODERES PARA APRENDER (P.P.A.) "Te dará suerte" en un mundo justo.</h1>
-        <img src="image_69fe03.png" alt="Logo PPA" class="ppa-logo" onerror="this.style.display='none'">
+    <div class="header-section">
+        <h1>PODERES PARA APRENDER (P.P.A.) <br> "Te dará suerte" en un mundo justo y te prepara para un mundo con I.A.</h1>
+        <div class="ppa-logo-container">
+            <img src="image_69fe03.png" alt="Logo PPA" class="ppa-logo" onerror="console.log('Error cargando imagen'); this.style.border='1px solid red';">
+        </div>
     </div>
 
     <header class="hero-card">
@@ -270,7 +277,7 @@
     <div id="Entrevista" class="tab-content active">
         <div id="full-interview-text">
             
-            <div class="block-title">Bloque 1: Presentación, Contexto y "Suerte"</div>
+            <div class="block-title">Bloque 1: Presentación, Contexto, Suerte e I.A.</div>
             <div class="q-container">
                 <span class="q-text">1. Para situar a nuestros lectores, ¿quién es Gregorio Gómez Pérez y qué nos presenta en este nuevo libro?</span>
                 <div class="a-text">Soy un docente apasionado por la evolución del sistema educativo y hoy presento «Poderes Para Aprender – P.P.A.», una obra editada por Círculo Rojo que nace bajo el lema «Gimnasia Para tu Cerebro». Este no es solo un libro de texto, sino el primer volumen de una ambiciosa tetralogía que busca transformar la educación y la sociedad, proporcionando herramientas poderosas para que cualquier persona mejore su capacidad de aprendizaje en un mundo que no deja de cambiar.</div>
@@ -283,121 +290,124 @@
                 <span class="q-text">3. Menciona usted que este libro "dará suerte" específicamente en un "mundo justo". ¿Qué quiere decir exactamente con este matiz?</span>
                 <div class="a-text">Es una distinción fundamental. Un "mundo justo" es aquel donde se valora el esfuerzo, la meritocracia, la igualdad y el talento real a la hora de encontrar un trabajo o progresar. En ese escenario, quien esté mejor preparado gracias a estos poderes tendrá, por definición, más "suerte". El libro es el motor, pero como sociedad debemos intentar que el mundo sea justo para que esa preparación encuentre siempre su recompensa.</div>
             </div>
+            
             <div class="q-container">
-                <span class="q-text">4. Entonces, ¿la efectividad de los "poderes" depende de la salud del sistema social?</span>
+                <span class="q-text">4. Una de sus frases más potentes es que este libro nos prepara para un mundo con Inteligencia Artificial. ¿Por qué una mente entrenada es más necesaria ahora que nunca?</span>
+                <div class="a-text">Precisamente porque un mundo con IA precisa, más que nunca, de mentes ágiles. La IA es un acelerador de capacidades increíble, pero si no sabes nada, no puedes sacar nada de ella. Es como un cohete: si no tienes rumbo ni motor propio, el cohete no te lleva a ningún sitio. Entrenar la mente con estos poderes permite aprender con mucha más eficiencia y nos da los procedimientos intelectuales que son, precisamente, lo que más se aprecia en la era tecnológica.</div>
+            </div>
+
+            <div class="q-container">
+                <span class="q-text">5. ¿Cómo interactúan específicamente los "poderes" del alumno con herramientas como la IA?</span>
+                <div class="a-text">De forma directa. Por ejemplo, si un alumno domina el "Efecto Concierto" (la preparación previa), podrá interactuar con una IA de forma mucho más profunda porque sabrá qué preguntar y cómo validar la respuesta. En este mundo donde todos somos alumnos constantes, conocer estos poderes nos permite maximizar los aprendizajes. La IA te da la potencia, pero los poderes P.P.A. te dan el control y la sabiduría para saber qué hacer con esa potencia.</div>
+            </div>
+
+            <div class="q-container">
+                <span class="q-text">6. Entonces, ¿la efectividad de los "poderes" depende de la salud del sistema social?</span>
                 <div class="a-text">Totalmente. Si aplicas estos poderes y te conviertes en un aprendiz eficiente y un profesional brillante, necesitas un entorno que no se mueva por "contactos" o "enchufismos", sino por méritos. Por eso el proyecto P.P.A. es una llamada a la acción: preparemos mentes brillantes y, simultáneamente, construyamos un mundo justo que sepa valorar y dar paso a esa brillantez.</div>
             </div>
             <div class="q-container">
-                <span class="q-text">5. ¿Por qué insiste tanto en la metáfora de las aulas como «gimnasios de la mente»?</span>
+                <span class="q-text">7. ¿Por qué insiste tanto en la metáfora de las aulas como «gimnasios de la mente»?</span>
                 <div class="a-text">Porque debemos desterrar la idea de que a clase se va solo a memorizar. En este gimnasio mental, cada interacción y cada tarea son ejercicios que desarrollan habilidades cognitivas y emocionales. Al igual que el ejercicio físico agiliza el cuerpo, el aprendizaje constante fortalece el cerebro, haciéndolo más resistente y creativo frente al futuro.</div>
             </div>
             <div class="q-container">
-                <span class="q-text">6. En este bloque de presentación, ¿qué papel juega la Inteligencia Artificial (IA) en su propuesta?</span>
-                <div class="a-text">Es un punto crucial. La IA es una herramienta que acelera nuestras capacidades, pero solo si ya tenemos una base sólida. Si no tenemos capacidad propia, la IA no nos sirve de nada; es como dar un coche de carreras a alguien que no sabe caminar. Por eso, primero debemos fortalecer nuestra inteligencia humana con un cerebro bien entrenado y una mente ágil para poder guiar la tecnología en beneficio de la sociedad.</div>
-            </div>
-            <div class="q-container">
-                <span class="q-text">7. ¿Este libro es solo para niños en edad escolar o tiene un alcance mayor?</span>
+                <span class="q-text">8. ¿Este libro es solo para niños en edad escolar o tiene un alcance mayor?</span>
                 <div class="a-text">Aunque el enfoque inicial parece escolar, tiene una perspectiva inclusiva total. Reconozco que todos somos aprendices constantes y que los alumnos de hoy son los trabajadores del mañana. Por ello, los seis poderes de este primer libro son aplicables a estudiantes, profesionales y cualquier ciudadano que quiera ser más eficiente en su día a día.</div>
-            </div>
-            <div class="q-container">
-                <span class="q-text">8. ¿Cómo se completa el proyecto global de esta tetralogía?</span>
-                <div class="a-text">El proyecto se sostiene sobre cuatro pilares que suman veinte efectos: este primer libro entrega seis poderes para el alumno; el segundo dará cinco efectos para el centro educativo; el tercero, cuatro para los profesores; y el cuarto, cinco efectos para la sociedad.</div>
             </div>
 
             <div class="block-title">Bloque 2: Resumen, Eficiencia y Respeto a lo Público</div>
             <div class="q-container">
                 <span class="q-text">9. El término «Eficiencia» aparece constantemente en su discurso. ¿Qué busca realmente con este concepto aplicado a la gestión del dinero público y el legado generacional?</span>
-                <div class="a-text">Busco un respeto absoluto por el esfuerzo que nos ha traído hasta aquí. Ser eficiente en educación no es solo "ahorrar", es gestionar con responsabilidad el dinero de todos. Si evitamos que un alumno pierda el tiempo o repita curso por falta de método, liberamos recursos que son vitales para la <strong>salud</strong> y las <strong>pensiones</strong>. Pienso en mi padre, Gregorio, que descargaba camiones de ladrillos a mano, y en mi madre, que cavaba las tierras de cereal a mano para quitar las malas hierbas. Eso sí que era trabajar duro. Ellos, y toda su generación, nos lo han dejado fácil para que hoy solo tengamos que "apretar botones". Por eso, lo mínimo que pueden hacer los alumnos hoy es ser eficientes y respetar lo público; para que el dinero se use bien y cuide de esos mayores que se dejaron la piel para que nosotros vivamos mejor.</div>
+                <div class="a-text">Busco un respeto absoluto por el esfuerzo que nos ha traído hasta aquí. Ser eficiente en educación no es solo "ahorrar", es gestionar con responsabilidad el dinero de todos. Si evitamos que un alumno pierda el tiempo o repita curso por falta de método, liberamos recursos que son vitales para la salud y las pensiones. Pienso en mi padre, Gregorio, y en mi madre... Ellos nos lo han dejado fácil para que hoy solo tengamos que "apretar botones". Lo mínimo que pueden hacer los alumnos hoy es ser eficientes y respetar lo público; para que el dinero se use bien y cuide de esos mayores que se dejaron la piel.</div>
             </div>
             <div class="q-container">
                 <span class="q-text">10. Usted hace una distinción muy original entre «Efectos» y «Poderes». ¿Nos la puede explicar?</span>
-                <div class="a-text">Los efectos son las palancas o herramientas prácticas que propongo, como el método de toma de notas o la postura en clase. Cuando aplicas esos efectos de forma constante y el aprendizaje se vuelve significativo, se generan los «poderes», que son el empoderamiento real del individuo.</div>
+                <div class="a-text">Los efectos son las palancas o herramientas prácticas que propongo. Cuando aplicas esos efectos de forma constante y el aprendizaje se vuelve significativo, se generan los «poderes», que son el empoderamiento real del individuo.</div>
             </div>
             <div class="q-container">
                 <span class="q-text">11. Hablando de eficiencia, ¿qué opina del esfuerzo que realizan los docentes hoy en día?</span>
-                <div class="a-text">Mi apoyo a los profesores es total. Sin embargo, el sistema los asfixia con una burocracia interminable que les quita tiempo para lo verdaderamente importante: enseñar. Pasamos demasiado tiempo en trámites burocráticos. ¡Dejen que los profesores enseñen! Menos papeles y más conexión real en el aula.</div>
+                <div class="a-text">Mi apoyo a los profesores es total. Sin embargo, el sistema los asfixia con una burocracia interminable. ¡Dejen que los profesores enseñen! Menos papeles y más conexión real en el aula.</div>
             </div>
             <div class="q-container">
                 <span class="q-text">12. En su libro sugiere que, si somos eficientes, podríamos reducir la jornada escolar. ¿Cómo funcionaría esto?</span>
-                <div class="a-text">Es una propuesta valiente: si con estos veinte poderes logramos enseñar lo mismo en cuatro días, el quinto día el alumno podría devolver a la sociedad parte de lo recibido, ayudando en su entorno o realizando actos sociales, valorando así los recursos públicos.</div>
+                <div class="a-text">Es una propuesta valiente: si con estos veinte poderes logramos enseñar lo mismo en cuatro días, el quinto día el alumno podría devolver a la sociedad parte de lo recibido ayudando en su entorno o realizando actos sociales.</div>
             </div>
             <div class="q-container">
-                <span class="q-text">13. ¿Cómo ayuda el entrenamiento cerebral previo a mejorar el uso de la Inteligencia Artificial?</span>
-                <div class="a-text">La IA acelera nuestras capacidades, pero si el cerebro está "apagado", la IA solo producirá resultados vacíos. Necesitamos mentes ágiles capaces de adaptarse y aprender continuamente para que el ser humano siempre esté al mando de la tecnología.</div>
-            </div>
-            <div class="q-container">
-                <span class="q-text">14. ¿Por qué considera que el tiempo es el recurso más valioso en su sistema P.P.A.?</span>
-                <div class="a-text">Porque el tiempo es limitado. Si concienciamos al alumno de que cada hora en el aula es una inversión, el objetivo es que el tiempo en clase se emplee con provecho real, evitando llevarse trabajo innecesario a casa por no haber sido eficiente por la mañana.</div>
+                <span class="q-text">13. ¿Por qué considera que el tiempo es el recurso más valioso en su sistema P.P.A.?</span>
+                <div class="a-text">Porque el tiempo es limitado. El objetivo es que el tiempo en clase se emplee con provecho real, evitando llevarse trabajo innecesario a casa por no haber sido eficiente por la mañana.</div>
             </div>
 
             <div class="block-title">Bloque 3: Explicación de los 6 Poderes del Alumno/Trabajador</div>
             <div class="q-container">
-                <span class="q-text">15. Entremos en materia: ¿Cuáles son esos seis efectos que desarrolla en este primer volumen?</span>
-                <div class="a-text">Son el Efecto Concierto, Efecto Cine, Efecto Periodista, Efecto Tiempo, Efecto Desayuno y Efecto «Tonto». Cada uno es una herramienta práctica para el día a día.</div>
+                <span class="q-text">14. Entremos en materia: ¿Cuáles son esos seis efectos que desarrolla en este primer volumen?</span>
+                <div class="a-text">Son el Efecto Concierto, Efecto Cine, Efecto Periodista, Efecto Tiempo, Efecto Desayuno y Efecto «Tonto».</div>
             </div>
             <div class="q-container">
-                <span class="q-text">16. El «Efecto Concierto» y el «Efecto Cine» parecen muy relacionados con la actitud. ¿Qué nos aportan?</span>
-                <div class="a-text">El Concierto se basa en la preparación previa: aprovechas más la clase si has leído algo antes. El Cine busca el silencio respetuoso; crear un ambiente de comunicación no verbal para no interrumpir el flujo de aprendizaje del compañero y el docente.</div>
+                <span class="q-text">15. El «Efecto Concierto» y el «Efecto Cine» parecen muy relacionados con la actitud. ¿Qué nos aportan?</span>
+                <div class="a-text">El Concierto se basa en la preparación previa: aprovechas más la clase si has leído algo antes. El Cine busca el silencio respetuoso para no interrumpir el flujo de aprendizaje.</div>
             </div>
             <div class="q-container">
-                <span class="q-text">17. ¿Cómo transforma el «Efecto Periodista» la dinámica de una clase?</span>
-                <div class="a-text">Convierte al alumno en protagonista activo. Como un periodista en rueda de prensa, debe investigar antes, tomar notas organizadas y hacer preguntas relevantes que enriquezcan el debate.</div>
+                <span class="q-text">16. ¿Cómo transforma el «Efecto Periodista» la dinámica de una clase?</span>
+                <div class="a-text">Convierte al alumno en protagonista activo que investiga antes, toma notas organizadas y hace preguntas relevantes.</div>
             </div>
             <div class="q-container">
-                <span class="q-text">18. Para el «Efecto Tiempo», usted utiliza un recurso nemotécnico: Bi.S.A. ¿Qué significa?</span>
-                <div class="a-text">Significa Bien sentado, Silencio y Atención. Estar bien sentado mejora la concentración y evita lesiones; el silencio permite la escucha activa y la atención es el compromiso real con el aprendizaje.</div>
+                <span class="q-text">17. Para el «Efecto Tiempo», usted utiliza un recurso nemotécnico: Bi.S.A. ¿Qué significa?</span>
+                <div class="a-text">Significa Bien sentado, Silencio y Atención. Mejora la concentración y es un compromiso real con el aprendizaje.</div>
             </div>
             <div class="q-container">
-                <span class="q-text">19. El «Efecto Desayuno» parece más un consejo de salud, ¿por qué es un "poder" para aprender?</span>
-                <div class="a-text">Porque la mente es un motor y el desayuno es la gasolina. Sin nutrición adecuada, el rendimiento baja. Mejora la concentración y la memoria, permitiendo que el cerebro rinda en condiciones óptimas.</div>
+                <span class="q-text">18. El «Efecto Desayuno» parece más un consejo de salud, ¿por qué es un "poder" para aprender?</span>
+                <div class="a-text">Porque la mente es un motor y el desayuno es la gasolina. Mejora la concentración y permite que el cerebro rinda en condiciones óptimas.</div>
             </div>
             <div class="q-container">
-                <span class="q-text">20. ¿Qué busca transmitir con el provocador «Efecto Tonto»?</span>
-                <div class="a-text">Es una llamada de atención sobre la responsabilidad personal. No aprovechar las horas de la mañana para luego intentar recuperarlas por la tarde es una ineficiencia que castiga al propio alumno. Busco que sea el arquitecto de su propio crecimiento.</div>
+                <span class="q-text">19. ¿Qué busca transmitir con el provocador «Efecto Tonto»?</span>
+                <div class="a-text">Es una llamada a la responsabilidad: no aprovechar las horas de la mañana para luego intentar recuperarlas por la tarde es una ineficiencia que castiga al propio alumno.</div>
             </div>
 
             <div class="block-title">Bloque 4: Reflexión, Meritocracia y el Papel de la Sociedad</div>
             <div class="q-container">
-                <span class="q-text">21. Usted afirma que «el alumno aprende del ejemplo». ¿Cómo influye la justicia social en la motivación del estudiante?</span>
-                <div class="a-text">Es vital. Si la sociedad es justa y premia el esfuerzo, el alumno imitará ese comportamiento. Pero si se premia la injusticia o el atajo, el mensaje es desolador. La educación debe ser el motor de la meritocracia real.</div>
+                <span class="q-text">20. Usted afirma que «el alumno aprende del ejemplo». ¿Cómo influye la justicia social en la motivación del estudiante?</span>
+                <div class="a-text">Es vital. Si la sociedad es justa y premia el esfuerzo, el alumno imitará ese comportamiento. La educación debe ser el motor de la meritocracia real.</div>
             </div>
             <div class="q-container">
-                <span class="q-text">22. En una sociedad donde a veces parece valorarse más el «enchufismo» que el mérito, ¿cómo motivamos a los alumnos?</span>
-                <div class="a-text">Ese es el gran desafío. Debemos luchar por una sociedad que valore el talento real. Si los alumnos ven que tras el esfuerzo viene una recompensa justa, se sentirán motivados. El "enchufismo" es el cáncer de la motivación escolar.</div>
+                <span class="q-text">21. En una sociedad donde a veces parece valorarse más el «enchufismo» que el mérito, ¿cómo motivamos a los alumnos?</span>
+                <div class="a-text">Ese es el gran desafío. Debemos luchar por una sociedad que valore el talento real. El "enchufismo" es el cáncer de la motivación escolar.</div>
             </div>
             <div class="q-container">
-                <span class="q-text">23. Ha comparado el civismo en clase con no tirar papeles al suelo. ¿Cree que la sociedad puede conseguir ese cambio?</span>
-                <div class="a-text">Sin duda. Logramos que no se tiren papeles al suelo concienciando a todos. Del mismo modo, debemos transmitir socialmente que a clase se va a aprovechar el tiempo. Es un valor social de respeto al aprendizaje.</div>
+                <span class="q-text">22. Ha comparado el civismo en clase con no tirar papeles al suelo. ¿Cree que la sociedad puede conseguir ese cambio?</span>
+                <div class="a-text">Sin duda. Debemos transmitir socialmente que a clase se va a aprovechar el tiempo. Es un valor social de respeto al aprendizaje.</div>
             </div>
             <div class="q-container">
-                <span class="q-text">24. ¿Por qué es fundamental que toda la sociedad conozca estos veinte poderes?</span>
-                <div class="a-text">Porque la educación nos beneficia a todos. Si padres, medios y empresas entienden estos poderes, apoyarán el esfuerzo del docente y del alumno, gestionando mejor los recursos comunes.</div>
+                <span class="q-text">23. ¿Qué mensaje le envía a las autoridades educativas respecto a los cambios constantes de leyes?</span>
+                <div class="a-text">Les pido estabilidad. Los cambios constantes solo generan más burocracia y desconcierto. Necesitamos leyes que perduren.</div>
             </div>
             <div class="q-container">
-                <span class="q-text">25. ¿Qué mensaje le envía a las autoridades educativas respecto a los cambios constantes de leyes?</span>
-                <div class="a-text">Les pido estabilidad. Los cambios constantes solo generan más burocracia y desconcierto. Necesitamos leyes que perduren y se centren en la eficiencia del aprendizaje, no en métricas vacías.</div>
-            </div>
-            <div class="q-container">
-                <span class="q-text">26. Para terminar este bloque, ¿qué espera que sienta el lector al cerrar este primer libro?</span>
-                <div class="a-text">Espero que sienta que ahora tiene en sus manos palancas reales para transformar su realidad y ser más dueño de su propia suerte a través de la preparación.</div>
+                <span class="q-text">24. Para terminar este bloque, ¿qué espera que sienta el lector al cerrar este primer libro?</span>
+                <div class="a-text">Espero que sienta que ahora tiene palancas reales para transformar su realidad y ser más dueño de su propia suerte.</div>
             </div>
 
             <div class="block-title">Bloque 5: Agradecimientos y Legado</div>
             <div class="q-container">
-                <span class="q-text">27. Todo gran proyecto tiene raíces profundas. ¿A quién le gustaría agradecer especialmente el haber llegado hasta aquí?</span>
-                <div class="a-text">En primer lugar, a mis padres. A ellos les debo los valores que me han guiado siempre: el valor del esfuerzo y la integridad. Ellos fueron mis primeros maestros en este "gimnasio de la vida" y su ejemplo es el que intento transmitir a mis alumnos.</div>
+                <span class="q-text">25. Todo gran proyecto tiene raíces profundas. ¿A quién le gustaría agradecer especialmente?</span>
+                <div class="a-text">A mis padres. A ellos les debo los valores de esfuerzo e integridad que me han guiado siempre. Fueron mis primeros maestros en la vida.</div>
             </div>
             <div class="q-container">
-                <span class="q-text">28. Su trayectoria le ha llevado por varios centros educativos. ¿Qué poso han dejado en usted?</span>
-                <div class="a-text">Guardo un cariño inmenso por todos, especialmente por los que más tiempo estuve. El <strong>IES La Bureba de Briviesca</strong> fue fundamental, donde aprendí mucho y realicé grandes proyectos. También el <strong>IES Félix Rodríguez de la Fuente</strong>, donde estudié y tuve la oportunidad de dar clases. Actualmente, en el <strong>IES Diego Marín Aguilera</strong>, disfruto de un ambiente de trabajo excelente, con una implicación altísima de todo el profesorado para mejorar y transmitir conocimientos con muchas ganas y actividades.</div>
+                <span class="q-text">26. Su trayectoria le ha llevado por varios centros educativos. ¿Qué poso han dejado en usted?</span>
+                <div class="a-text">El IES La Bureba de Briviesca fue fundamental, y el IES Félix Rodríguez de la Fuente, donde estudié y di clases. Actualmente, en el IES Diego Marín Aguilera, disfruto de un ambiente de trabajo excelente.</div>
             </div>
             <div class="q-container">
-                <span class="q-text">29. Usted también tiene un vínculo fuerte con la ingeniería en Burgos. ¿Qué destacaría de su paso por el Colegio Profesional?</span>
-                <div class="a-text">Quiero agradecer al <strong>Colegio de Ingenieros Graduados e Ingenieros Técnicos Industriales de Burgos</strong> por los años que estuve como secretario técnico. La labor que desempeñan formando y luchando por la profesión es clave. Los ingenieros son los garantes del cumplimiento de la normativa y reglamentación técnica en nuestra sociedad e industria, una labor de una importancia social altísima.</div>
+                <span class="q-text">27. Usted también tiene un vínculo fuerte con la ingeniería en Burgos. ¿Qué destacaría?</span>
+                <div class="a-text">Agradezco al Colegio de Ingenieros Industriales de Burgos por los años que estuve como secretario técnico. La labor que desempeñan formando y luchando por la profesión es clave.</div>
             </div>
             <div class="q-container">
-                <span class="q-text">30. Ha sido una charla muy completa. ¿Algún agradecimiento final antes de cerrar esta entrevista?</span>
-                <div class="a-text">Sí, por supuesto. Quiero agradecer de todo corazón a <strong>El Diario</strong> por brindarme esta oportunidad para presentar el libro «Poderes Para Aprender – P.P.A.». Espacios como este permiten que la educación sea el centro de la conversación social, algo imprescindible para construir ese mundo justo del que hablo. Gracias por vuestro tiempo e interés.</div>
+                <span class="q-text">28. ¿Cuál es su visión final sobre la relación entre el esfuerzo y la tecnología?</span>
+                <div class="a-text">La tecnología, como la IA, no elimina la necesidad del esfuerzo, sino que lo potencia. Los P.P.A. son el cimiento sobre el cual la tecnología puede construir algo grandioso.</div>
+            </div>
+            <div class="q-container">
+                <span class="q-text">29. ¿Qué le diría a alguien que cree que ya es tarde para aprender "poderes"?</span>
+                <div class="a-text">Nunca es tarde. El cerebro es plástico y agradece el entrenamiento a cualquier edad. Empezar hoy es la mejor decisión para asegurar un mañana más sencillo.</div>
+            </div>
+            <div class="q-container">
+                <span class="q-text">30. Ha sido una charla muy completa. ¿Algún agradecimiento final?</span>
+                <div class="a-text">Sí, agradecer de todo corazón a El Diario por brindarme esta oportunidad. Espacios como este permiten que la educación sea el centro de la conversación social.</div>
             </div>
         </div>
     </div>
