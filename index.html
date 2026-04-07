@@ -33,13 +33,25 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        h1 {
-            text-align: left;
-            color: var(--primary-color);
-            font-size: 1.4rem;
-            margin-bottom: 20px;
+        .header-main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        .ppa-logo {
+            max-height: 60px;
+            width: auto;
+            border-radius: 5px;
         }
 
         .hero-card {
@@ -196,13 +208,18 @@
         @media (max-width: 600px) {
             .hero-word { font-size: 2.2rem; }
             .tab-link { flex: 1 1 100%; border-radius: 4px; }
+            .header-main { flex-direction: column-reverse; align-items: flex-start; }
+            .ppa-logo { margin-bottom: 10px; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>PODERES PARA APRENDER (P.P.A.) "Te dará suerte" en un mundo justo.</h1>
+    <div class="header-main">
+        <h1>PODERES PARA APRENDER (P.P.A.) "Te dará suerte" en un mundo justo.</h1>
+        <img src="image_69fe03.png" alt="Logo PPA" class="ppa-logo" onerror="this.style.display='none'">
+    </div>
 
     <header class="hero-card">
         <p class="hero-intro">
