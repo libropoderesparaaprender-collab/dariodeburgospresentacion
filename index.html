@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBRO PODERES PARA APRENDER - Entrevista</title>
+    <style>
+        :root {
+            --primary-color: #1a252f;
+            --secondary-color: #d35400; 
+            --cream-bg: #FFF9ED; 
+            --bg-color: #f2f4f4;
+            --text-color: #2c3e50;
+            --question-color: #7E5109; /* Color Marrón para preguntas */
+            --answer-color: #000000;   /* Color Negro para respuestas */
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: left;
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        /* --- SECCIÓN DE PRESENTACIÓN --- */
+        .hero-card {
+            background-color: var(--cream-bg);
+            border-left: 10px solid var(--secondary-color);
+            padding: 40px 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .hero-intro { font-size: 1.2rem; margin-bottom: 10px; }
+        .hero-label { font-weight: 800; display: block; margin-top: 15px; color: var(--primary-color); }
+        .hero-word {
+            display: block;
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+            margin: 10px 0;
+            color: #000;
+        }
+
+        .hero-quote-box {
+            border-top: 1px solid rgba(211, 84, 0, 0.1);
+            padding-top: 25px;
+            margin-top: 20px;
+        }
+
+        .hero-phrase { font-size: 1.3rem; font-style: italic; margin-bottom: 15px; }
+
+        /* --- TABS --- */
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 25px;
+        }
+
+        .tab-link {
+            padding: 12px 20px;
+            cursor: pointer;
+            background: #ecf0f1;
+            border: none;
+            outline: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border-radius: 8px 8px 0 0;
+            color: var(--primary-color);
+        }
+
+        .tab-link.active {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* --- BLOQUES DE ENTREVISTA --- */
+        .block-title {
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 30px 0 20px 0;
+            font-size: 1.2rem;
+        }
+
+        .q-container {
+            background: #fff;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 20px 0;
+            margin-bottom: 10px;
+        }
+
+        .q-text {
+            color: var(--question-color); /* MARRÓN */
+            font-weight: bold;
+            display: block;
+            margin-bottom: 12px;
+            font-size: 1.15rem;
+        }
+
+        .q-text::before {
+            content: "P: ";
+            font-weight: 900;
+        }
+
+        .a-text {
+            color: var(--answer-color); /* NEGRO */
+            line-height: 1.7;
+            padding-left: 20px;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        .a-text::before {
+            content: "R: ";
+            font-weight: bold;
+            margin-left: -20px;
+            margin-right: 5px;
+        }
+
+        /* --- BOTONES --- */
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin: 20px 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .btn-amazon { background: #ff9900; color: white; }
+        .btn-web { background: #27ae60; color: white; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+        .center { text-align: center; }
+
+        @media (max-width: 600px) {
+            .hero-word { font-size: 2.2rem; }
+            .tab-link { flex: 1 1 100%; border-radius: 4px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>PODERES PARA APRENDER (P.P.A.)</h1>
+    
+    <header class="hero-card">
+        <p class="hero-intro">
+            <strong>Poderes Para Aprender</strong> busca la eficiencia en el aprendizaje en esta aula llamada mundo.
+            <span class="hero-label">Nuestro objetivo: conseguir personas más</span>
+        </p>
+        <span class="hero-word">preparadas</span>
+        <p class="hero-intro">en menos tiempo y con menos recursos.</p>
+
+        <div class="hero-quote-box">
+            <p class="hero-phrase">
+                "La suerte es lo que sucede cuando la preparación se encuentra con la oportunidad."
+            </p>
+            <small>(Filósofo Séneca)</small>
+        </div>
+    </header>
+
+    <div class="tabs">
+        <button class="tab-link active" onclick="openTab(event, 'Entrevista')">Entrevista P.P.A.</button>
+        <button class="tab-link" onclick="openTab(event, 'Compra')">🛒 Amazon</button>
+        <button class="tab-link" onclick="openTab(event, 'Web')">🌐 Web Oficial</button>
+    </div>
+
+    <!-- PESTAÑA ENTREVISTA -->
+    <div id="Entrevista" class="tab-content active">
+        
+        <div class="block-title">Bloque 1: Presentación, Contexto y "Suerte"</div>
+        <div class="q-container">
+            <span class="q-text">Para situar a nuestros lectores, ¿quién es Gregorio Gómez Pérez y qué nos presenta en este nuevo libro?</span>
+            <div class="a-text">Soy un docente apasionado por la evolución del sistema educativo y hoy presento «Poderes Para Aprender – P.P.A.», una obra editada por Círculo Rojo que nace bajo el lema «Gimnasia Para tu Cerebro». Este no es solo un libro de texto, sino el primer volumen de una ambiciosa tetralogía que busca transformar la educación y la sociedad, proporcionando herramientas poderosas para que cualquier persona mejore su capacidad de aprendizaje en un mundo que no deja de cambiar.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">Usted afirma que este libro «dará suerte» a quien lo lea basándose en la cita de Séneca. ¿Cómo puede un manual de aprendizaje influir en la fortuna de una persona?</span>
+            <div class="a-text">La suerte no es un evento azaroso, sino el resultado de estar listo cuando la puerta se abre. Con este libro, busco que el lector realice esa «gimnasia mental» necesaria para fortalecer su cerebro. Al adquirir estos «poderes», el alumno o trabajador estará más preparado; por lo tanto, cuando aparezca la oportunidad de un nuevo conocimiento, un trabajo o un reto, su mente estará ágil para aprovecharlo. La suerte de mis lectores será su capacidad de respuesta ante la vida.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">¿Por qué insiste tanto en la metáfora de las aulas como «gimnasios de la mente»?</span>
+            <div class="a-text">Porque debemos desterrar la idea de que a clase se va solo a memorizar. En este gimnasio mental, cada interacción y cada tarea son ejercicios que desarrollan habilidades cognitivas y emocionales. Al igual que el ejercicio físico agiliza el cuerpo, el aprendizaje constante fortalece el cerebro, haciéndolo más resistente y creativo frente al futuro.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">En este bloque de presentación, ¿qué papel juega la Inteligencia Artificial (IA) en su propuesta?</span>
+            <div class="a-text">Es un punto crucial. La IA es una herramienta que acelera nuestras capacidades, pero solo si ya tenemos una base sólida. Si no tenemos capacidad propia, la IA no nos sirve de nada; es como dar un coche de carreras a alguien que no sabe caminar. Por eso, primero debemos fortalecer nuestra inteligencia humana con un cerebro bien entrenado y una mente ágil para poder guiar la tecnología en beneficio de la sociedad, y no al revés.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">¿Este libro es solo para niños en edad escolar o tiene un alcance mayor?</span>
+            <div class="a-text">Aunque el enfoque inicial parece escolar, tiene una perspectiva inclusiva total. Reconozco que todos somos aprendices constantes y que los alumnos de hoy son los trabajadores del mañana. Por ello, los seis poderes de este primer libro son aplicables a estudiantes, profesionales y cualquier ciudadano que quiera ser más eficiente en su día a día laboral y personal.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">¿Cómo se completa el proyecto global de esta tetralogía?</span>
+            <div class="a-text">El proyecto se sostiene sobre cuatro pilares que suman veinte efectos: este primer libro entrega seis poderes para el alumno; el segundo dará cinco efectos para el centro educativo; el tercero, cuatro para los profesores; y el cuarto, cinco efectos para la sociedad. Queremos que todo el sistema educativo se haga fuerte para enfrentar los desafíos del futuro.</div>
+        </div>
+
+        <div class="block-title">Bloque 2: Resumen, Eficiencia y Burocracia</div>
+        <div class="q-container">
+            <span class="q-text">El término «Eficiencia» aparece constantemente en su discurso. ¿Qué busca realmente con este concepto aplicado a la educación?</span>
+            <div class="a-text">Busco un cambio de paradigma: pasar de ser meramente eficaces a ser realmente eficientes. Ser eficiente significa lograr los mismos aprendizajes —o incluso mejores— en menos tiempo y optimizando los recursos públicos. No se trata de trabajar más, sino de trabajar mejor para que la inversión educativa rinda sus frutos en otros ámbitos como la salud o las pensiones.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">Usted hace una distinción muy original entre «Efectos» y «Poderes». ¿Nos la puede explicar?</span>
+            <div class="a-text">Los efectos son las palancas o herramientas prácticas que propongo, como el método de toma de notas o la postura en clase. Cuando aplicas esos efectos de forma constante y el aprendizaje se vuelve significativo, se generan los «poderes», que no son otra cosa que el empoderamiento real del individuo para crecer y desarrollarse en cualquier ámbito de la vida.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">Hablando de eficiencia, ¿qué opina del esfuerzo que realizan los docentes hoy en día?</span>
+            <div class="a-text">Mi apoyo a los profesores es total; su esfuerzo y dedicación son la base de todo. Sin embargo, el sistema los asfixia con una burocracia y un papeleo interminable que les quita tiempo para lo verdaderamente importante: enseñar. Pasamos demasiado tiempo en adaptaciones continuas, cambios de programación por nuevas leyes y trámites burocráticos para gestionar al alumnado. ¡Dejen que los profesores enseñen! Menos papeles y más conexión real en el aula es lo que necesitamos para ser eficientes.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">En su libro sugiere que, si somos eficientes, podríamos reducir la jornada escolar. ¿Cómo funcionaría esto?</span>
+            <div class="a-text">Es una propuesta valiente: si con estos veinte poderes logramos enseñar lo mismo en cuatro días, el quinto día el alumno podría devolver a la sociedad parte de lo recibido. Podrían ayudar en el entorno, enseñar a compañeros menores o realizar actos sociales. Así, ellos mismos valorarían más los recursos que la sociedad pone a su disposición.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">¿Cómo ayuda el entrenamiento cerebral previo a mejorar el uso de la Inteligencia Artificial?</span>
+            <div class="a-text">Como decía antes, la IA acelera nuestras capacidades. Si un alumno tiene pensamiento crítico y creatividad —fruto de esa «gimnasia mental»—, usará la IA para llegar más lejos. Pero si el cerebro está "apagado", la IA solo producirá resultados vacíos. Necesitamos mentes ágiles capaces de adaptarse y aprender continuamente para que el ser humano siempre esté por encima de la tecnología.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">¿Por qué considera que el tiempo es el recurso más valioso en su sistema P.P.A.?</span>
+            <div class="a-text">Porque los estudiantes a menudo perciben el tiempo como inagotable, cuando es un recurso limitado. Si concienciamos al alumno de que cada hora en el aula es una inversión, evitaremos que posterguen tareas para la tarde. El objetivo es que el tiempo en clase se emplee con provecho real, igual que un profesional hace en su trabajo para no tener que llevárselo a casa.</div>
+        </div>
+
+        <div class="block-title">Bloque 3: Explicación de los 6 Poderes del Alumno/Trabajador</div>
+        <div class="q-container">
+            <span class="q-text">Entremos en materia: ¿Cuáles son esos seis efectos que desarrolla en este primer volumen?</span>
+            <div class="a-text">Son el Efecto Concierto, Efecto Cine, Efecto Periodista, Efecto Tiempo, Efecto Desayuno y Efecto «Tonto». Cada uno es una herramienta práctica para el día a día.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">El «Efecto Concierto» y el «Efecto Cine» parecen muy relacionados con la actitud. ¿Qué nos aportan?</span>
+            <div class="a-text">El Concierto se basa en la preparación previa; igual que disfrutas más de un concierto si te sabes la letra, el alumno aprovecha más la clase si ha leído el tema antes. El Cine busca el silencio respetuoso. Los alumnos aprenden a usar «miradas de comunicación» para pedirse silencio entre ellos, creando un ambiente de respeto hacia el profesor y el compañero sin necesidad de interrumpir.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">¿Cómo transforma el «Efecto Periodista» la dinámica de una clase?</span>
+            <div class="a-text">Convierte al alumno de espectador pasivo en protagonista activo. Como un periodista en rueda de prensa, el alumno debe investigar antes, estar atento, tomar notas organizadas y hacer preguntas relevantes que clarifiquen dudas y enriquezcan el debate para todos.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">Para el «Efecto Tiempo», usted utiliza un recurso nemotécnico: Bi.S.A. ¿Qué significa?</span>
+            <div class="a-text">Significa Bien sentado, Silencio y Atención. Estar bien sentado no es solo educación, es salud y productividad: mejora la concentración y evita lesiones. El silencio es la base para la escucha activa, y la atención es el compromiso real con lo que se está aprendiendo.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">El «Efecto Desayuno» parece más un consejo de salud, ¿por qué es un "poder" para aprender?</span>
+            <div class="a-text">Porque la mente es un motor y el desayuno es la gasolina. Sin nutrición, el motor se detiene o rinde mal. Un buen desayuno mejora la concentración, la memoria y regula el estado de ánimo, permitiendo que el alumno esté en condiciones óptimas para aprender y participar.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">¿Qué busca transmitir con el provocador «Efecto Tonto»?</span>
+            <div class="a-text">Es una llamada de atención sobre la responsabilidad personal. No aprovechar las horas de la mañana, que son una oportunidad de oro, para luego intentar recuperarlas por la tarde es una ineficiencia. Uso este término para que el alumno reflexione, tome el timón de su educación y sea el arquitecto de su propio crecimiento.</div>
+        </div>
+
+        <div class="block-title">Bloque 4: Reflexión, Meritocracia y el Papel de la Sociedad</div>
+        <div class="q-container">
+            <span class="q-text">Usted afirma que «el alumno aprende del ejemplo». ¿Cómo influye la justicia social en la motivación del estudiante?</span>
+            <div class="a-text">Este es un punto vital. Si la sociedad es justa y premia el esfuerzo, el alumno imitará ese comportamiento. Pero si la sociedad premia la injusticia o la falta de igualdad, el mensaje que recibe el joven es desolador. La educación debe ser el motor de la meritocracia real.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">En una sociedad donde a veces parece valorarse más el «enchufismo» que el mérito, ¿cómo motivamos a los alumnos para que se esfuercen?</span>
+            <div class="a-text">Ese es el gran desafío. Debemos luchar por una sociedad con menos enchufismo en cualquier trabajo. Si los alumnos ven que tras el esfuerzo viene una recompensa justa y un trabajo basado en su talento, se sentirán motivados. El "enchufismo" es el cáncer de la motivación escolar; por eso P.P.A. pide que la sociedad valore el mérito para que el alumno vea que su "gimnasia mental" tiene un premio real en la vida.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">Ha comparado el civismo en clase con no tirar papeles al suelo. ¿Cree que la sociedad puede conseguir ese cambio?</span>
+            <div class="a-text">Sin duda. La sociedad logró que los niños no tiren papeles al suelo concienciando a todos. Del mismo modo, la tele, los padres y los medios deben repetir que a clase se va a aprovechar el tiempo y no a molestar. Debe ser un valor social aceptado: el respeto al tiempo ajeno y al propio aprendizaje es tan importante como mantener limpia nuestra calle.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">¿Por qué es fundamental que toda la sociedad —y no solo las escuelas— conozca estos veinte poderes?</span>
+            <div class="a-text">Porque la educación es cuestión de todos y nos beneficia a todos. Si los padres, los medios y las empresas entienden estos poderes, apoyarán el esfuerzo del docente y del alumno. Una sociedad unida en torno a la educación es una sociedad que gestiona mejor sus recursos y crea un futuro más próspero.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">¿Qué mensaje le envía a las autoridades educativas respecto a los cambios constantes de leyes y programas?</span>
+            <div class="a-text">Les pido estabilidad y que escuchen a quienes están en el "gimnasio" diario. Los cambios constantes solo generan más papeleo y desconcierto. Necesitamos leyes que perduren y que se centren en la eficiencia del aprendizaje y en el bienestar del docente, no en métricas burocráticas vacías.</div>
+        </div>
+        <div class="q-container">
+            <span class="q-text">Para terminar, ¿qué espera que sienta el lector al cerrar este primer libro de la tetralogía?</span>
+            <div class="a-text">Espero que sienta que ha iniciado un viaje creativo y que ahora tiene en sus manos palancas reales para transformar su realidad. Quiero que cada persona se sienta empoderada para ser más eficiente, más preparada y, en definitiva, más dueña de su propia suerte.</div>
+        </div>
+
+    </div>
+
+    <!-- PESTAÑA COMPRA -->
+    <div id="Compra" class="tab-content">
+        <div class="center">
+            <h2>¡ADQUIERE TU EJEMPLAR!</h2>
+            <p>Empieza hoy mismo tu gimnasia mental y prepárate para el éxito.</p>
+            <a href="https://www.amazon.es/s?k=poderes+para+aprender+gregorio+gomez+perez" target="_blank" class="btn btn-amazon">
+                COMPRAR EN AMAZON
+            </a>
+            <p>Publicado por Editorial Círculo Rojo.</p>
+        </div>
+    </div>
+
+    <!-- PESTAÑA WEB -->
+    <div id="Web" class="tab-content">
+        <div class="center">
+            <h2>PROYECTO P.P.A.</h2>
+            <p>Descubre más sobre la tetralogía y el método de eficiencia educativa.</p>
+            <a href="https://libropoderesparaaprender-collab.github.io/libropoderesparaaprender1/" target="_blank" class="btn btn-web">
+                WEB OFICIAL
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            tabcontent[i].classList.remove("active");
+        }
+        tablinks = document.getElementsByClassName("tab-link");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+        document.getElementById(tabName).style.display = "block";
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+    }
+</script>
+
+</body>
+</html>
